@@ -1,0 +1,20 @@
+# Recreate with:
+#   pip install torch==2.9.1 torchvision==0.24.1 --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r requirements.txt
+name: rcbr-yolo
+channels:
+  - defaults
+dependencies:
+  - python=3.12.16
+  - pip
+  - pip:
+      - torch==2.9.1+cu128
+      - torchvision==0.24.1+cu128
+      - ultralytics==8.4.198
+      - ultralytics-thop==2.2.4
+      - numpy==2.5.4
+      - opencv-python==5.0.0.93
+      - matplotlib==3.11.2
+      - pillow==13.0.0
+      - pycocotools==2.0.11
+      - psutil==7.2.2

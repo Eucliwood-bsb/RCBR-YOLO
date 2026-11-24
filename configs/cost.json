@@ -1,0 +1,22 @@
+{
+  "measured_with": {
+    "tool": "torch.profiler(with_flops=True) on a full forward pass",
+    "precision": "FP16",
+    "input": "1x3x640x640, batch 1",
+    "device": "NVIDIA RTX 4090",
+    "convention": "1 multiply-add = 2 FLOPs (torch.profiler and Ultralytics/THOP both use this)",
+    "includes": "backbone, neck, both Detect branches (one2many + one2one) and the decode step",
+    "excludes": "preprocessing, NMS, result construction, host-device transfer"
+  },
+  "dual_branch_export_graph": {
+    "A_C": {"params": 21786766, "gflops": 74.406},
+    "B_D": {"params": 22361554, "gflops": 80.013},
+    "delta": {"params": 574788, "params_pct": 2.64, "gflops": 5.607, "gflops_pct": 7.54}
+  },
+  "fused_single_branch_graph": {
+    "A_C": {"params": 20356391, "gflops": 68.126},
+    "B_D": {"params": 20931179, "gflops": 73.733},
+    "note": "Detect.fuse() removes the unused one-to-one head; this is the deployment graph."
+  },
+  "note": "Param counts are for nc=9. The official YOLO26m at nc=80 has 21,896,248 params in the same dual-branch convention. FLOPs are not latency."
+}

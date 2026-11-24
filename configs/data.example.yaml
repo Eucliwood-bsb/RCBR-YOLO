@@ -1,0 +1,24 @@
+# Example Ultralytics dataset yaml.
+# Copy to <repo>/data/data.yaml and keep `path: .` (paths are resolved relative
+# to the yaml file). Adjust the nine class names only if your annotations use a
+# different order -- the class indices are what the checkpoints store.
+#
+# In the recorded benchmark only `pinhole` has instance annotations. The other
+# declared classes have zero boxes; see docs/PROTOCOL.md §8 before describing the
+# task as a seven-class problem.
+path: .
+train: images/train
+val: images/val
+test: images/test
+
+nc: 9
+names:
+  0: pinhole
+  1: edge burst
+  2: insufficient ink
+  3: ink bleeding
+  4: contamination
+  5: misalignment
+  6: bubble
+  7: broken line
+  8: smearing

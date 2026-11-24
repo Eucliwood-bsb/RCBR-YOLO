@@ -1,0 +1,28 @@
+# Data, weights and generated artefacts are never committed.
+data/
+weights/
+runs/
+reports/
+state/
+preds/
+
+# Checkpoints / model files
+*.pt
+*.pth
+*.onnx
+*.engine
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
