@@ -174,6 +174,7 @@ latency claim is made anywhere and FLOPs are not used as a substitute.
 
 ## License
 
-No license file is shipped with this snapshot. The code depends on
-`ultralytics`, which is distributed under AGPL-3.0; review the implications
-before publishing or redistributing derived code or weights. See `NOTICE.md`.
+This project is licensed under the **GNU Affero General Public License v3.0**
+(AGPL-3.0); see `LICENSE`. It depends on `ultralytics`, which is also AGPL-3.0.
+If a modified version is offered as a network service, the AGPL's source-offer
+obligation applies. See `NOTICE.md` for third-party details.

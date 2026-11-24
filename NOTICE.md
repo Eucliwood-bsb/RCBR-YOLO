@@ -1,9 +1,8 @@
 # Third-party notices
 
-This snapshot contains code written for the RCBR-YOLO experiments plus one
-evaluation module from the same project (`src/evaluate_operating_points.py`).
-No license file is included; choose one that fits your institution's policy
-before publishing the repository.
+The code in this repository is licensed under **AGPL-3.0** (see `LICENSE`).
+It also contains one evaluation module from the same project
+(`src/evaluate_operating_points.py`), distributed under the same terms.
 
 ## Runtime dependency: Ultralytics
 

@@ -5,7 +5,7 @@ reports are excluded by `.gitignore`.
 
 ## 1. Before the first commit
 
-- [ ] Choose and add a `LICENSE` (the snapshot ships none; see `NOTICE.md`).
+- [x] `LICENSE` added: AGPL-3.0 (see `NOTICE.md` for third-party terms).
 - [ ] Add author/contact or a `CITATION.cff` if the paper is public.
 - [ ] Confirm `git status` contains no `data/`, `weights/`, `runs/`, `reports/`,
       `state/` or `*.pt` files.
